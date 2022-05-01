@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		9F397B8A281EA94700DCABCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F397B88281EA94700DCABCF /* Main.storyboard */; };
 		9F397B8C281EA94B00DCABCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F397B8B281EA94B00DCABCF /* Assets.xcassets */; };
 		9F397B8F281EA94B00DCABCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F397B8D281EA94B00DCABCF /* LaunchScreen.storyboard */; };
+		9F397B9B281EAB9700DCABCF /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F397B9A281EAB9700DCABCF /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		9F397B8B281EA94B00DCABCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F397B8E281EA94B00DCABCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F397B90281EA94B00DCABCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F397B9A281EAB9700DCABCF /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				9F397B82281EA94700DCABCF /* AppDelegate.swift */,
 				9F397B84281EA94700DCABCF /* SceneDelegate.swift */,
+				9F397B9A281EAB9700DCABCF /* MainTabBarController.swift */,
 				9F397B86281EA94700DCABCF /* ViewController.swift */,
 				9F397B88281EA94700DCABCF /* Main.storyboard */,
 				9F397B8B281EA94B00DCABCF /* Assets.xcassets */,
@@ -102,7 +105,7 @@
 				};
 			};
 			buildConfigurationList = 9F397B7A281EA94700DCABCF /* Build configuration list for PBXProject "PhotoGalleryUnsplash" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -139,6 +142,7 @@
 			files = (
 				9F397B87281EA94700DCABCF /* ViewController.swift in Sources */,
 				9F397B83281EA94700DCABCF /* AppDelegate.swift in Sources */,
+				9F397B9B281EAB9700DCABCF /* MainTabBarController.swift in Sources */,
 				9F397B85281EA94700DCABCF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +293,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X8KHXL86W5;
 				INFOPLIST_FILE = PhotoGalleryUnsplash/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,7 +313,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X8KHXL86W5;
 				INFOPLIST_FILE = PhotoGalleryUnsplash/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
