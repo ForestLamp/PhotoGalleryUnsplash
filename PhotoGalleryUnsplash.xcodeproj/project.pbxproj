@@ -14,6 +14,7 @@
 		9F397B8C281EA94B00DCABCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F397B8B281EA94B00DCABCF /* Assets.xcassets */; };
 		9F397B8F281EA94B00DCABCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F397B8D281EA94B00DCABCF /* LaunchScreen.storyboard */; };
 		9F397B9B281EAB9700DCABCF /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F397B9A281EAB9700DCABCF /* MainTabBarController.swift */; };
+		9F397BA0281EB44300DCABCF /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F397B9F281EB44300DCABCF /* PhotosCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9F397B8E281EA94B00DCABCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F397B90281EA94B00DCABCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F397B9A281EAB9700DCABCF /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		9F397B9F281EB44300DCABCF /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,25 @@
 		9F397B81281EA94700DCABCF /* PhotoGalleryUnsplash */ = {
 			isa = PBXGroup;
 			children = (
-				9F397B82281EA94700DCABCF /* AppDelegate.swift */,
-				9F397B84281EA94700DCABCF /* SceneDelegate.swift */,
-				9F397B9A281EAB9700DCABCF /* MainTabBarController.swift */,
-				9F397B86281EA94700DCABCF /* ViewController.swift */,
-				9F397B88281EA94700DCABCF /* Main.storyboard */,
-				9F397B8B281EA94B00DCABCF /* Assets.xcassets */,
-				9F397B8D281EA94B00DCABCF /* LaunchScreen.storyboard */,
 				9F397B90281EA94B00DCABCF /* Info.plist */,
+				9F397B8B281EA94B00DCABCF /* Assets.xcassets */,
+				9F397BA2281EB46700DCABCF /* Supporting Files */,
+				9F397B9A281EAB9700DCABCF /* MainTabBarController.swift */,
+				9F397B9F281EB44300DCABCF /* PhotosCollectionViewController.swift */,
+				9F397B86281EA94700DCABCF /* ViewController.swift */,
 			);
 			path = PhotoGalleryUnsplash;
+			sourceTree = "<group>";
+		};
+		9F397BA2281EB46700DCABCF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F397B82281EA94700DCABCF /* AppDelegate.swift */,
+				9F397B84281EA94700DCABCF /* SceneDelegate.swift */,
+				9F397B88281EA94700DCABCF /* Main.storyboard */,
+				9F397B8D281EA94B00DCABCF /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +154,7 @@
 				9F397B87281EA94700DCABCF /* ViewController.swift in Sources */,
 				9F397B83281EA94700DCABCF /* AppDelegate.swift in Sources */,
 				9F397B9B281EAB9700DCABCF /* MainTabBarController.swift in Sources */,
+				9F397BA0281EB44300DCABCF /* PhotosCollectionViewController.swift in Sources */,
 				9F397B85281EA94700DCABCF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
