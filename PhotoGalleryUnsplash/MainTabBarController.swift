@@ -14,11 +14,9 @@ final class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addControllers()
-        
     }
     
     // MARK: - Private methods
-    //Ok
     
     private func addControllers(){
         let photosVC = generateNavBarController(vc: PhotosCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout()), title: "PhotoGalery", icon: #imageLiteral(resourceName: "photoGalery23x23"))
