@@ -12,7 +12,7 @@ class PhotosCollectionViewController: UICollectionViewController {
 //MARK: - Private properties
     
     private let reuseIdentifier = "Cell"
-    let timer = Timer()
+    private let networkManager = NetworkManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,5 +69,8 @@ extension PhotosCollectionViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print(searchText)
+        networkManager.request(searchTerm: searchText) { (_, _) in
+            print("123")
+        }
     }
 }
