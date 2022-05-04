@@ -10,9 +10,15 @@ import Foundation
 
 class Api {
     
-    private let accessKey = "RRSJHKwK0LJ1qXK2IDPdaza2Y8ZtTnXzsHRUcv1BUPU"
+    private let accessKey = "Client-ID RRSJHKwK0LJ1qXK2IDPdaza2Y8ZtTnXzsHRUcv1BUPU"
     private let numberOfPage = 1
     private let photoPerPage = 90
+    
+    func prepareHeader()-> [String : String]?{
+        var headers = [String : String]()
+        headers["Authorization"] = accessKey
+        return headers
+    }
     
     func prepareParameters(searchTerm: String?) -> [String: String] {
         var parameters = [String: String]()

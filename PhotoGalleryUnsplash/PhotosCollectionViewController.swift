@@ -9,19 +9,21 @@ import UIKit
 
 class PhotosCollectionViewController: UICollectionViewController {
     
-//MARK: - Private properties
+    //MARK: - Private properties
     
     private let reuseIdentifier = "Cell"
-    private let networkManager = NetworkManager()
-
+    private let parser = Parser()
+    private var timer: Timer?
+    private var photos = [UnsplashPhoto]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addElementsOnScreen()
     }
-
-// MARK: - Private methods
     
-//MARK: Setup UI
+    // MARK: - Private methods
+    
+    //MARK: Setup UI
     
     private func addElementsOnScreen(){
         setupCollectionView()
@@ -42,35 +44,41 @@ class PhotosCollectionViewController: UICollectionViewController {
         self.definesPresentationContext = true
         searchController.searchBar.delegate = self
     }
-
-
-// MARK: UICollectionViewDataSource
-
+    
+    
+    // MARK: UICollectionViewDataSource
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-
-        return 5
+        
+        return photos.count
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        cell.backgroundColor = .green
-    
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotosCell.reuseID, for: indexPath) as! PhotosCell
+        let unspashPhoto = photos[indexPath.item]
+        cell.unsplashPhoto = unspashPhoto
         return cell
     }
-
+    
 }
 
 // MARK: - Extensions
 
 extension PhotosCollectionViewController: UISearchBarDelegate {
     
-    
-    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print(searchText)
-        networkManager.request(searchTerm: searchText) { (_, _) in
-            print("123")
-        }
+        
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { (_) in
+            self.parser.fetchImages(searchTerm: searchText) { [weak self] (searchResults) in
+                guard let fetchedPhotos = searchResults else { return }
+ //               self?.spinner.stopAnimating()
+                self?.photos = fetchedPhotos.results
+                self?.collectionView.reloadData()
+//                self?.refresh()
+            }
+        })
     }
 }
+
