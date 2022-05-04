@@ -43,6 +43,7 @@ class PhotosCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        // Убрать в один метод
         addImageView()
         addTextField()
     }
